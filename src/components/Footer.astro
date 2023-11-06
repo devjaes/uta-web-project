@@ -1,9 +1,126 @@
+---
+import { Image } from "astro:assets";
+import logo_uta_gris from "/public/logo_uta_gris.png";
+---
+
 <footer>
-  <div class="container h-56">
-    <div class="w-full bg-white h-full">
-      <div class="col-md-12">
-        <p>© 2017 - Todos os direitos reservados</p>
+  <div
+    class="flex flex-col container h-86 align-middle justify-center bg-black h-full text-white"
+  >
+    <div
+      class="flex flex-col md:flex-row w-11/12 md:space-x-6 py-20 md:space-y-0 space-y-20 self-center"
+    >
+      <div class="flex flex-col w-full md:w-1/4 space-y-4">
+        <div class="flex h-1/6">
+          <Image src={logo_uta_gris} alt="Logo" loading="lazy" />
+        </div>
+        <p class="pt-6 text-gray-400">Campus Huachi</p>
+        <p>(03) 285 2020</p>
+        <p>uta@uta.edu.ec</p>
+        <p>"La educación es poder, poder es educación"</p>
       </div>
+      <div class="flex flex-col w-full md:w-1/4">
+        <p class="text-lg border-b-2 pb-2 mb-5">
+          <strong>Académicos</strong>
+        </p>
+        <ul class="flex flex-col space-y-3">
+          <a href="https://www.uta.edu.ec/v4.0/index.php/grado"
+            >Calendario Académico</a
+          >
+          <a href="https://www.uta.edu.ec/v4.0/">Grado</a>
+          <a
+            href="https://www.uta.edu.ec/v4.0/index.php/160-posgrados-oferta-2023/5722-conoce-nuestros-programas-de-posgrados-2023"
+            >Posgrado</a
+          >
+          <a href="https://www.uta.edu.ec/v4.0/index.php/salud"
+            >Bienestar Universitario</a
+          >
+          <a
+            href="https://deadv.uta.edu.ec/index.php?option=com_sppagebuilder&view=page&id=7"
+            >Plataformas Estuadiantiles</a
+          >
+          <a href="https://biblioteca.uta.edu.ec/">Biblioteca</a>
+          <a
+            href="https://servicios.uta.edu.ec/SistemaIntegrado/Cuenta/Login?ReturnUrl=%2fSistemaIntegrado"
+            >Sistema Integrado UTA</a
+          >
+        </ul>
+      </div>
+      <div class="flex flex-col w-full md:w-1/4">
+        <p class="text-lg border-b-2 pb-2 mb-5">
+          <strong>Enlaces Varios</strong>
+        </p>
+        <ul class="flex flex-col space-y-3">
+          <a
+            href="https://deadv.uta.edu.ec/index.php?option=com_sppagebuilder&view=page&id=7"
+            >Bolsa de empleo</a
+          >
+          <a href="https://www.uta.edu.ec/v4.0/index.php/servicios-web"
+            >Servicios WEB</a
+          >
+          <a href="https://uta.edu.ec/v4.0/index.php/noticia-23"
+            >Rendición de cuentas</a
+          >
+          <a
+            href="https://www.uta.edu.ec/v4.0/index.php/aseguramiento-de-la-calidad"
+            >SAIC</a
+          >
+          <a href="https://www.uta.edu.ec/v4.0/index.php/etica2"
+            >Comité de Ética</a
+          >
+          <a href="https://www.uta.edu.ec/v4.0/index.php/ruta-de-buses-uta"
+            >Ruta de buses UTA</a
+          >
+          <a
+            href="https://www.uta.edu.ec/v4.0/index.php/convocatoriamenu1/convocaroriasconcursos2023"
+            >Convocatorias de vinculación</a
+          >
+        </ul>
+      </div>
+      <div class="flex flex-col text-gray-400 w-full md:w-1/4">
+        <p class="text-lg border-b-2 pb-2 mb-3">
+          <strong class="text-white">Contáctanos</strong>
+        </p>
+        <form class="flex flex-col" action=" ">
+          <label class="py-2" for="name_input"> Nombre:</label>
+          <input
+            class="rounded-sm p-2"
+            type="text"
+            placeholder="Nombre y Apellido"
+          />
+          <label class="py-2" for="email_input"> Correo:</label>
+          <input
+            class="rounded-sm p-2"
+            type="text"
+            placeholder="Correo electrónico"
+          />
+          <label class="py-2" for="message_input"> Mensaje:</label>
+          <textarea
+            class="rounded-sm p-2"
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Mensaje"></textarea>
+          <button
+            class="bg-gray-600 rounded-sm hover:bg-gray-700 hover:text-white py-2 mt-3"
+            >Enviar</button
+          >
+        </form>
+      </div>
+    </div>
+    <div class="flex justify-center place-items-center bg-gray-intense h-16">
+      <p>Copyright © Universidad Técnica de Ambato</p>
     </div>
   </div>
 </footer>
+
+<style>
+  a {
+    color: rgb(156 163 175);
+  }
+
+  a:hover {
+    color: rgb(255 255 255);
+  }
+</style>

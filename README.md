@@ -12,7 +12,7 @@ npm create astro@latest -- --template basics
 
 ## To see the project enter [![Uta-Web-Project] (https://uta-web-project.vercel.app/)]
 
-![Page-image]([https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554](https://devjaes.vercel.app/assets/uta-web-app.png))
+![Page-image](https://devjaes.vercel.app/assets/uta-web-app.png)
 
 
 ## 🧞 Commands

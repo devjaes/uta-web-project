@@ -1,18 +1,6 @@
-# Uta Web Redesign
-
-## Technologies used
-Astro web Framework
-
-**Created using astro basics template**
-```sh
-npm create astro@latest -- --template basics
-```
-
-> 🧑‍🚀 **Interested?** Watch the page!
-
-## To see the project enter [![Uta-Web-Project] (https://uta-web-project.vercel.app/)]
-
-![Page-image](https://devjaes.vercel.app/assets/uta-web-app.png)
+# Uta web project
+You can clone the project, install dependences and run the project. Or just see the page itself on:
+https://uta-web-project.vercel.app/
 
 
 ## 🧞 Commands
@@ -27,3 +15,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+

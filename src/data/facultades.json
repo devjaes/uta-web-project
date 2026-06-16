@@ -1,0 +1,188 @@
+[
+    {
+        "id": "FCA",
+        "label": "Ciencias Administrativas",
+        "descripcion": "Descripción de Ciencias Administrativas.",
+        "mision": "Misión de Ciencias Administrativas.",
+        "vision": "Visión de Ciencias Administrativas.",
+        "carreras": [
+            {
+                "nombre": "Administración de Empresas",
+                "titulo": "Lic. en Administración de Empresas",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            },
+            {
+                "nombre": "Marketing",
+                "titulo": "Lic. en Marketing",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            }
+        ]
+    },
+    {
+        "id": "FCIA",
+        "label": "Ciencia e Ingeniería en Alimentos",
+        "descripcion": "Descripción de Ciencia e Ingeniería en Alimentos.",
+        "mision": "Misión de Ciencia e Ingeniería en Alimentos.",
+        "vision": "Visión de Ciencia e Ingeniería en Alimentos.",
+        "carreras": [
+            {
+                "nombre": "Ingeniería en Alimentos",
+                "titulo": "Ing. en Alimentos",
+                "duracion": "5 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            },
+            {
+                "nombre": "Ingeniería en BioAlimentos",
+                "titulo": "Ing. en BioAlimentos",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            }
+        ]
+    },
+    {
+        "id": "FCYA",
+        "label": "Contabilidad y Auditoría",
+        "descripcion": "Descripción de Contabilidad y Auditoría.",
+        "mision": "Misión de Contabilidad y Auditoría.",
+        "vision": "Visión de Contabilidad y Auditoría.",
+        "carreras": [
+            {
+                "nombre": "Economía",
+                "titulo": "Economista",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            }
+        ]
+    },
+    {
+        "id": "FJC",
+        "label": "Jurisprudencia y Ciencias Sociales",
+        "descripcion": "Descripción de Jurisprudencia y Ciencias Sociales.",
+        "mision": "Misión de Jurisprudencia y Ciencias Sociales.",
+        "vision": "Visión de Jurisprudencia y Ciencias Sociales.",
+        "carreras": [
+            {
+                "nombre": "Dercho",
+                "titulo": "Abogado",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            },
+            {
+                "nombre": "Comunicación social",
+                "titulo": "Lic. en Comunicación Social",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            },
+            {
+                "nombre": "Trabajo social",
+                "titulo": "Lic. en Trabajo Social",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            }
+        ]
+    },
+    {
+        "id": "FCHE",
+        "label": "Ciencias Humanas y de la Educación",
+        "descripcion": "Descripción de Ciencias Humanas y de la Educación.",
+        "mision": "Misión de Ciencias Humanas y de la Educación.",
+        "vision": "Visión de Ciencias Humanas y de la Educación.",
+        "carreras": [
+            {
+                "nombre": "Turismo",
+                "titulo": "Lic. en Turismo",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            },
+            {
+                "nombre": "Psicopedagogía",
+                "titulo": "Lic. en Psicopedagogía",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            },
+            {
+                "nombre": "Educación Básica",
+                "titulo": "Lic. en Educación Básica",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            }
+        ]
+    },
+    {
+        "id": "FCS",
+        "label": "Ciencias de la Salud",
+        "descripcion": "Descripción de Ciencias de la Salud.",
+        "mision": "Misión de Ciencias de la Salud.",
+        "vision": "Visión de Ciencias de la Salud.",
+        "carreras": [
+            {
+                "nombre": "Medicina",
+                "titulo": "Médico y Cirujano",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            },
+            {
+                "nombre": "Enfermería",
+                "titulo": "Lic. en Enfermería",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            },
+            {
+                "nombre": "Fisioterapia",
+                "titulo": "Lic. en Fisioterapia",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            }
+        ]
+    },
+    {
+        "id": "FICM",
+        "label": "Ingeniería Civil y Mecánica",
+        "descripcion": "Descripción de Ingeniería Civil y Mecánica.",
+        "mision": "Misión de Ingeniería Civil y Mecánica.",
+        "vision": "Visión de Ingeniería Civil y Mecánica.",
+        "carreras": [
+            {
+                "nombre": "Ingería Civil",
+                "titulo": "Ing. Civil",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            },
+            {
+                "nombre": "Ingeniería Mecánica",
+                "titulo": "Ing. Mecánico",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            }
+        ]
+    },
+    {
+        "id": "FISEI",
+        "label": "Ingeniería en Sistemas, Electrónica e Industrial",
+        "descripcion": "Descripción de Ingeniería en Sistemas, Electrónica e Industrial.",
+        "mision": "Misión de Ingeniería en Sistemas, Electrónica e Industrial.",
+        "vision": "Visión de Ingeniería en Sistemas, Electrónica e Industrial.",
+        "carreras": [
+            {
+                "titulo": "Ingeniería en Tecnologías de la Información",
+                "duracion": "4 años",
+                "nombre": "Ing. en Tecnologías de la Información",
+                "descripcion": "Descripción de la carrera de Administración de Empresas."
+            },
+            {
+                "nombre": "Ingniería en Software",
+                "titulo": "Ing. en Software",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            },
+            {
+                "nombre": "Ingeniería Industrial",
+                "titulo": "Ing. Industrial",
+                "duracion": "4 años",
+                "descripcion": "Descripción de la carrera de Marketing."
+            }
+        ]
+    }
+]

@@ -1,0 +1,169 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import facultades from "../../data/facultades.json";
+import StoryLine from "../../components/StoryLine.tsx";
+import type { MenuItem } from "primereact/menuitem";
+import logo from "../../../public/banderin.png";
+import Degree from "../../components/Degree.astro";
+
+const { id } = Astro.params;
+
+let facultad;
+if (id) {
+  facultad = facultades.find((carrera) => carrera.id === id);
+}
+
+export function getStaticPaths() {
+  return [
+    { params: { id: "FCA" } },
+    { params: { id: "FCIA" } },
+    { params: { id: "FCYA" } },
+    { params: { id: "FJC" } },
+    { params: { id: "FCHE" } },
+    { params: { id: "FCS" } },
+    { params: { id: "FICM" } },
+    { params: { id: "FISEI" } },
+  ];
+}
+
+const items: MenuItem[] = [
+  {
+    label: "Grado",
+    url: "/grado",
+  },
+  { label: `Facultad de ${facultad?.label}` },
+];
+---
+
+<Layout title="Oferta Académica">
+  <div class="hero">
+    <div
+      class="absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col items-center justify-center gap-10"
+    >
+      <div>
+        <h3 class="text-white text-center text-2xl font-thin">Grado</h3>
+        <h2 class="text-white font-bold text-center text-2xl xl:text-5xl">
+          Facultad de {facultad?.label}
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <StoryLine items={items} client:visible />
+
+  <div class="hero-info hero">
+    <div
+      class="absolute inset-0 bg-red-950 bg-opacity-70 flex flex-col xl:flex-row items-center justify-center gap-10 h-full pb-8 xl:py-0"
+    >
+      <div class="flex-1 flex justify-center items-center">
+        <div
+          class="flex justify-center items-center flex-col gap-5 mt-8 text-white"
+        >
+          <img src={logo.src} width="50px" />
+          <h1 class="text-center text-blanco text-2xl">
+            {facultad?.label}
+          </h1>
+          <h1 class="text-xl mt-10">Redes Sociales</h1>
+          <div class="flex gap-7 text-blanco">
+            <a
+              href="https://www.facebook.com/UniversidadTecnicadeAmbatoOficial"
+              target="_blank"><i class="pi pi-facebook"></i></a
+            >
+            <a href="https://www.instagram.com/utecnicaambato/" target="_blank"
+              ><i class="pi pi-instagram"></i></a
+            >
+            <a
+              href="https://www.youtube.com/@universidadtecnicadeambato9122/videos"
+              target="_blank"><i class="pi pi-youtube"></i></a
+            >
+            <a
+              href="https://www.linkedin.com/school/universidad-t%C3%A9cnica-de-ambato/"
+              target="_blank"><i class="pi pi-linkedin"></i></a
+            >
+          </div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/M3CbRJ6jgQc?si=DFuSR3a7kioKC7dM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="hidden xl:block h-0 xl:h-80"></iframe>
+        </div>
+      </div>
+      <div
+        class="flex-1 text-white flex flex-col gap-7 px-6 xl:pr-40 justify-center text-center xl:text-start"
+      >
+        <p>
+          La Facultad de {facultad?.label} forma profesionales especializados en
+          las diversas escalas de la arquitectura, desde la conformación de la
+          ciudad y su entorno urbano, las diferentes tipologías de hábitat,
+          hasta el confort interior de los espacios, considerando las
+          necesidades del entorno de una sociedad.
+        </p>
+        <p class="hidden xl:block">
+          La facultad cuenta con equipos especializados que permiten a los
+          estudiantes materializar sus ideas y generar soluciones creativas a
+          diversas problemáticas. Además, fomentamos la participación de
+          expertos nacionales e internacionales, brindando a nuestros
+          estudiantes la oportunidad de conocer otras perspectivas sobre temas
+          relevantes durante su carrera.
+        </p>
+        <p>
+          Nuestros alumnos también participan en proyectos de investigación y de
+          vinculación, lo que les brinda la posibilidad de publicar en revistas
+          indexadas internacionales con la orientación de nuestros docentes. A
+          través de estas actividades, los estudiantes de la Facultad {
+            facultad?.label
+          }
+           establecen conexiones sólidas tanto con empresas públicas como
+          privadas, enriqueciendo su experiencia profesional.
+        </p>
+        <h2 class="font-bold text-xl">Mision</h2>
+        <p>{facultad?.mision}</p>
+        <h2 class="font-bold text-xl">Vision</h2>
+        <p>{facultad?.vision}</p>
+      </div>
+    </div>
+  </div>
+  <hr class="mt-4" />
+  <h2 class="py-4 text-center font-bold text-3xl">Carreras disponibles</h2>
+  <hr class="mb-5" />
+  <div class="flex flex-col lg:flex-row gap-8 justify-center items-center py-4">
+    {
+      facultad?.carreras.map((carrera) => (
+        <Degree
+          titulo={carrera.titulo}
+          duracion={carrera.duracion}
+          nombre={carrera.nombre}
+          descripcion={carrera.descripcion}
+        />
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .hero {
+    background-image: url(../../../public/heroGrados.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    margin-bottom: 0;
+    max-height: 30rem;
+  }
+
+  .hero-info {
+    background-image: url(../../../public/infoGrados.jpg);
+    height: 80rem;
+    max-height: none;
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      height: 60rem;
+    }
+  }
+</style>

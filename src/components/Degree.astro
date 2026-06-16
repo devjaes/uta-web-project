@@ -1,0 +1,65 @@
+---
+export interface Props {
+  titulo: string;
+  duracion: string;
+  nombre: string;
+  descripcion: string;
+}
+
+const { titulo, duracion, nombre, descripcion } = Astro.props;
+---
+
+<div class="sombra max-w-fit">
+  <div class="flex flex-col max-w-xl hero">
+    <div
+      class="absolute lg:inset-0 bg-gray-900 text-white font-semibold text-center p-4 bg-opacity-70 flex items-center justify-center gap-10 rounded-t-lg w-full h-full"
+    >
+      <div>{nombre}</div>
+    </div>
+  </div>
+  <div class="max-w-xs md:max-w-none">
+    <div class="flex flex-col gap-2 p-4">
+      <div class="flex flex-col gap-2">
+        <div class="font-bold">Duración</div>
+        <div>{duracion}</div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="font-bold">Titulo adquirido</div>
+        <div>{titulo}</div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="font-bold">Descripción</div>
+        <div>{descripcion}</div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .hero {
+      background-image: url(../../public/GradoEspecifico.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      margin-bottom: 0;
+      height: 5rem;
+      width: 100%;
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        width: 45rem;
+        height: 10rem;
+      }
+    }
+
+    .sombra {
+      -webkit-box-shadow: 0px 5px 15px 0px rgba(181, 181, 181, 1);
+      -moz-box-shadow: 0px 5px 15px 0px rgba(181, 181, 181, 1);
+      box-shadow: 0px 5px 15px 0px rgba(181, 181, 181, 1);
+      background-color: var(--blanco);
+      border-radius: 1rem;
+    }
+  </style>
+</div>

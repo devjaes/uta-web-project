@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import galo from "../assets/galo.png";
+---
+
+<div class="flex flex-col xl:flex-row">
+  <div class="flex-1">
+    <Image src={galo} alt="curso estudiantes" />
+  </div>
+  <div class="flex-1 text-center bg-red-900 text-white hero">
+    <div class="hero-content w-full h-full py-10">
+      <h1 class="text-3xl font-semibold py-2">Bienvenido a la UTA</h1>
+      <h2 class="text-xl">En constante innovación</h2>
+      <p class="py-8 px-24">
+        Ofrecemos una oferta académica de Grado con estándar internacional,
+        calidad y enseñanza. Nuestros convenios les permiten ampliar a los
+        estudiantes su desarrollo académico en las mejores universidades de
+        Europa, Asia y América.
+      </p>
+
+      <p class="mb-3 firma">Galo Naranjo</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+
+  .hero {
+    background-image: url(../../../public/titulo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-content {
+    background-color: rgba(73, 17, 17, 0.781);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .firma {
+    font-family: "Mr Dafoe", cursive;
+    font-size: 1.5rem;
+  }
+</style>

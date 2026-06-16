@@ -1,0 +1,79 @@
+---
+import type { MenuItem } from "primereact/menuitem";
+import StoryLine from "../../components/StoryLine";
+import maestrias from "../../data/maestrias.json";
+import Layout from "../../layouts/Layout.astro";
+
+const items: MenuItem[] = [{ label: "Centro de posgrados" }];
+---
+
+<Layout title="Posgrados">
+  <div>
+    <div class="top-hero">
+      <div
+        class="absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col items-center justify-center gap-10"
+      >
+        <div>
+          <h1 class="text-gray-100 font-bold text-center text-2xl xl:text-5xl">
+            Centro de Posgrados
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <StoryLine items={items} client:visible />
+    <hr />
+    <h2 class="py-4 text-center font-bold text-3xl">
+      Maestrias y Especializaciones
+    </h2>
+    <hr class="mb-5" />
+    <div class="mx-auto max-w-xs md:max-w-screen-sm xl:max-w-screen-xl">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 justify-center items-center"
+      >
+        {
+          maestrias.map((maestria) => {
+            return (
+              <a
+                class="flex justify-center items-center "
+                href="/posgrado/SpecificOGDegree"
+              >
+                <div class="hero text-center ">
+                  <div class="absolute lg:inset-0 bg-gray-900 hover:bg-red-900 hover:bg-opacity-70 text-white font-semibold text-center p-4 bg-opacity-70 flex items-center justify-center rounded-lg w-full h-full">
+                    <div>{maestria.nombre}</div>
+                  </div>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .top-hero {
+    background-image: url(../../../estudiantes-maestria.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    max-height: 30rem;
+    border-radius: 0.5rem;
+  }
+
+  .hero {
+    background-image: url(../../../titulo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    max-height: 30rem;
+    border-radius: 0.5rem;
+  }
+</style>

@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Curso from "../../../public/curso.jpeg";
+import StoryLine from "../../components/StoryLine";
+import type { MenuItem } from "primereact/menuitem";
+import "primeicons/primeicons.css";
+import Facultades from "../../data/facultades.json";
+
+const items: MenuItem[] = [
+  {
+    label: "Grado",
+  },
+];
+---
+
+<Layout title="Oferta académica">
+  <div class="top-hero">
+    <div
+      class="absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col items-center justify-center gap-10"
+    >
+      <div>
+        <h3 class="text-white text-center text-2xl font-thin">UTA</h3>
+        <h2 class="text-white font-bold text-center text-2xl xl:text-5xl">
+          Grados
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <StoryLine items={items} client:visible />
+
+  <div class="flex">
+    <div
+      class="flex-1 flex flex-col gap-9 items-center justify-center text-center px-24 bg-red-900 text-white"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-school"
+        width="72"
+        height="72"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#ffffff"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+      </svg>
+      <p class="pb-8">
+        Ofrecemos una oferta académica de Grado con estándar internacional,
+        calidad y enseñanza. Nuestros convenios les permiten ampliar a los
+        estudiantes su desarrollo académico en las mejores universidades de
+        Europa, Asia y América.
+      </p>
+    </div>
+    <div class="flex-1 hidden xl:block">
+      <img src={Curso.src} alt="curso estudiantes" class="w-full" />
+    </div>
+  </div>
+
+  <hr class="mt-5"/>
+  <h2 class="py-4 text-center font-bold text-3xl">
+    Facultades
+  </h2>
+  <hr class="mb-5" />
+  <div class="mx-auto max-w-xs md:max-w-screen-sm xl:max-w-screen-xl">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 justify-center items-center"
+    >
+      {
+        Facultades.map((facultad) => {
+          return (
+            <a
+              class="flex justify-center items-center "
+              href= `/grado/${facultad.id}`
+            >
+              <div class="hero text-center ">
+                <div class="absolute lg:inset-0 bg-gray-900 hover:bg-red-800 hover:bg-opacity-70 text-white font-semibold text-center p-4 bg-opacity-70 flex items-center justify-center rounded-lg w-full h-full">
+                  <div>{facultad.label}</div>
+                </div>
+              </div>
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .top-hero {
+    background-image: url(../../../estudiantes-maestria.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    max-height: 30rem;
+    border-radius: 0.5rem;
+  }
+
+  .hero {
+    background-image: url(../../../public/titulo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    max-height: 30rem;
+    border-radius: 0.5rem;
+  }
+</style>

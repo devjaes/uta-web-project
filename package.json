@@ -2,6 +2,9 @@
   "name": "uta-web-project",
   "type": "module",
   "version": "0.0.1",
+  "exports": {
+    "import": "./node_modules/primereact/breadcrumb/breadcrumb.esm.js"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,7 +14,18 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
+    "@astrojs/react": "^3.0.4",
+    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/vercel": "^5.2.0",
+    "@types/react": "^18.2.36",
+    "@types/react-dom": "^18.2.14",
     "astro": "^3.4.3",
+    "primeicons": "^6.0.1",
+    "primereact": "^10.0.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   }
 }

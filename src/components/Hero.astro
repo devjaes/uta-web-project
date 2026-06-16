@@ -1,0 +1,120 @@
+<!--
+<div class="hero">
+  <div
+    class="absolute inset-0 bg-red-700 bg-opacity-70 flex flex-col items-center justify-center gap-10"
+  >
+    <h2 class="text-slate-200 font-bold text-center text-6xl italic shadow">
+      La mejor Universidad de Latinoamérica
+    </h2>
+    <div class="flex">
+      
+      <div class="flex items-center text-white text-lg">Ambato, Ecuador</div>
+    </div>
+    <img src="" alt="">
+    <a href="/grado" class="bg-gray-intense text-white px-5 py-3 rounded-full">Conoce más</a>
+    
+    
+  </div>
+</div>
+ -->
+<div class="banner">
+  <div class="banner-content">
+    <h2>La mejor Universidad de Latinoamérica</h2>
+    <h3>Ambato, Ecuador</h3>
+    <a href="/grado">Conoce más</a>
+  </div>
+</div>
+
+<style>
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 45rem;
+    max-height: 30rem;
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.1s ease-in-out;
+    animation: banner 20s infinite linear;
+  }
+
+  .banner-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(127, 29, 29, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px;) {
+    .banner-content h2 {
+      font-size: 60px;
+    }
+  }
+
+  .banner-content h3 {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .banner-content a {
+    text-decoration: none;
+    color: white;
+    padding: 9px 20px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .banner-content a:hover {
+    background-color: white;
+    color: #333;
+  }
+
+  @keyframes banner {
+    0% {
+      background-image: url(../../public/banner-1.jpg);
+    }
+    25% {
+      background-image: url(../../public/banner-1.jpg);
+    }
+
+    26% {
+      background-image: url(../../public/banner-2.jpg);
+    }
+    50% {
+      background-image: url(../../public/banner-2.jpg);
+    }
+
+    51% {
+      background-image: url(../../public/banner-3.JPG);
+    }
+    75% {
+      background-image: url(../../public/banner-3.JPG);
+    }
+
+    76% {
+      background-image: url(../../public/banner-4.webp);
+    }
+    100% {
+      background-image: url(../../public/banner-4.webp);
+    }
+  }
+</style>
